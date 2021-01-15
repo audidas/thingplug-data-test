@@ -6,7 +6,7 @@ import { ThingdataService } from './thingdata.service';
 export class ThingdataController {
   constructor(private readonly thingdataService: ThingdataService) {}
 
-  @Post('/')
+  @Get('/')
   getThingPlugData(req: Request, @Body() body) {
     this.thingdataService.getThingPlugData(req, body);
   }
