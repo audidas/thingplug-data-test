@@ -8,7 +8,6 @@ export class ThingdataService {
   constructor(private readonly socketService: SocketService) {}
 
   getThingPlugData(req: Request, body): void {
-    const jsonobj = parser.parse(body);
-    this.socketService.socket.emit('receive', { body: jsonobj });
+    this.socketService.socket.emit('receive', { body });
   }
 }
